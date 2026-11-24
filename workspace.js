@@ -1,5 +1,42 @@
 const tabs = Array.from(document.querySelectorAll('[role="tab"]'));
 const logToggle = document.getElementById('log-toggle');
+const diagramColors = {
+  '--paper': '--bg',
+  '--rail': '--panel',
+  '--field': '--toolbar-menu-bg',
+  '--ink': '--text',
+  '--muted': '--text-muted',
+  '--rule': '--panel-border',
+  '--accent-swatch': '--arrow-emphasis',
+};
+let activeFrame;
+const themeObserver = new MutationObserver(copyDiagramTheme);
+
+function copyDiagramTheme() {
+  const diagram = activeFrame?.contentDocument?.documentElement;
+  if (!diagram?.dataset.theme) return;
+  const colors = activeFrame.contentWindow.getComputedStyle(diagram);
+  const workspace = document.documentElement.style;
+  workspace.colorScheme = diagram.dataset.theme;
+  for (const [name, source] of Object.entries(diagramColors)) {
+    workspace.setProperty(name, colors.getPropertyValue(source).trim());
+  }
+}
+
+function watchDiagramTheme(frame) {
+  themeObserver.disconnect();
+  activeFrame = frame;
+  const diagram = frame.contentDocument?.documentElement;
+  if (!diagram) return;
+  copyDiagramTheme();
+  themeObserver.observe(diagram, { attributes: true, attributeFilter: ['data-theme', 'data-preset'] });
+}
+
+for (const frame of document.querySelectorAll('[role="tabpanel"] iframe')) {
+  frame.addEventListener('load', () => {
+    if (frame === activeFrame) watchDiagramTheme(frame);
+  });
+}
 
 function setLogOpen(open) {
   document.body.toggleAttribute('data-log-open', open);
@@ -18,6 +55,7 @@ function selectDiagram() {
     if (selected) {
       const frame = panel.querySelector('iframe');
       if (frame.dataset.src && !frame.hasAttribute('src')) frame.src = frame.dataset.src;
+      watchDiagramTheme(frame);
       document.title = tab.textContent + ' · 风险图谱';
     }
   }

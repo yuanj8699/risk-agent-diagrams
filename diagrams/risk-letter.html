@@ -5196,7 +5196,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
         <div class="pulse-dot"></div>
         <h1>风险提示函到行社风险问题</h1>
       </div>
-      <p style="margin:6px 0 0 22px;font-size:13px;color:var(--text-muted, #94a3b8);">进度与待办总览（2026-11-24 · 阶段1-6本地闭环已完成）· 面向全体 82 家行社 · 绿=已完成 / 橙=待内网联调或补数 / 红=下一步待做 / 灰=架构已简化</p>
+      <p style="margin:6px 0 0 22px;font-size:13px;color:var(--text-muted, #94a3b8);">进度与待办总览（2026-11-26 · v1.0.0 正式版已发布）· 面向全体 82 家行社 · 绿=已完成 / 橙=待内网联调或补数 / 红=下一步待做 / 灰=架构已简化</p>
     </div>
 
 
@@ -5508,8 +5508,8 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           <g aria-hidden="true" data-semantic-sigil="backend" class="semantic-sigil s-backend" transform="translate(259.20000000000005 1468) scale(0.6875)">
             <path d="M6 3 3 8l3 5M10 3l3 5-3 5"/>
             <g class="st-pill st-pill-wait" aria-hidden="true">
-            <rect x="383.2" y="1454" width="94" height="15" rx="7.5"/>
-            <text x="430.2" y="1464.6" text-anchor="middle">本地已通 · 待切行内</text>
+            <rect x="377.2" y="1454" width="100" height="15" rx="7.5"/>
+            <text x="427.2" y="1464.6" text-anchor="middle">DS+算子通 · 待切行内</text>
           </g>
         </g>
           <text data-node-label="" data-detail-anchor="" x="368.20000000000005" y="1483" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">分析各行社实际风险问题</text>
@@ -5523,9 +5523,9 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           <g aria-hidden="true" data-semantic-sigil="stop" class="semantic-sigil s-frontend" transform="translate(259.20000000000005 1568) scale(0.6875)">
             <circle cx="8" cy="8" r="5.3"/>
             <rect x="6.1" y="6.1" width="3.8" height="3.8" rx=".5" class="sigil-fill"/>
-            <g class="st-pill st-pill-wait" aria-hidden="true">
-            <rect x="375.2" y="1554" width="102" height="15" rx="7.5"/>
-            <text x="426.2" y="1564.6" text-anchor="middle">动态公文已通 · PDF待做</text>
+            <g class="st-pill st-pill-done" aria-hidden="true">
+            <rect x="373.2" y="1554" width="104" height="15" rx="7.5"/>
+            <text x="425.2" y="1564.6" text-anchor="middle">自动报告+Word已通</text>
           </g>
         </g>
           <text data-node-label="" data-detail-anchor="" x="368.20000000000005" y="1583" class="t-primary" font-size="11" font-weight="600" text-anchor="middle">结束：统一输出行社报告</text>
@@ -5653,41 +5653,40 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
             <text x="880.2" y="944.5" text-anchor="middle">待内网联调</text>
           </g>
           <line x1="678" y1="955" x2="906" y2="955" stroke="var(--lane-stroke)" stroke-width="0.75" opacity="0.7"/>
-          <text x="680" y="969" class="t-backend roadmap-sec">✓ 适配器已封装并通过模拟自测</text>
-          <text x="682" y="982.5" class="t-muted roadmap-item">• AK/SK v2签名 + cookie/ticket 身份层就绪</text>
-          <text x="682" y="995.0" class="t-muted roadmap-item">• OLAP主通道 + 小Q SSE流式客户端已封装</text>
-          <text x="682" y="1007.5" class="t-muted roadmap-item">• 凭据不传给Pi子进程，多身份隔离归档库</text>
-          <text x="680" y="1025.0" class="t-security roadmap-sec">▸ 接下来必做（P0 · 内网联调）</text>
-          <text x="682" y="1038.5" class="t-muted roadmap-item">• 填入内网 AK/SK、reportId 与站点地址</text>
-          <text x="682" y="1051.0" class="t-muted roadmap-item">• 对照内网 olap-client 核对顶层请求/响应</text>
-          <text x="682" y="1063.5" class="t-muted roadmap-item">• 落地正式 ticket/网关鉴权，替代手工Cookie</text>
+          <text x="680" y="969" class="t-backend roadmap-sec">✓ 已按内网真实协议对齐并过桩测</text>
+          <text x="682" y="982.5" class="t-muted roadmap-item">• smartq_ticket 纯HTTP同源免登与5分钟缓存</text>
+          <text x="682" y="995.0" class="t-muted roadmap-item">• 真实 olapQueryParam 表单与长/宽表自适应</text>
+          <text x="682" y="1007.5" class="t-muted roadmap-item">• 小Q SSE流式封装，凭据留宿主、按身份隔离库</text>
+          <text x="680" y="1025.0" class="t-security roadmap-sec">▸ 接下来必做（P0 · 内网实测）</text>
+          <text x="682" y="1038.5" class="t-muted roadmap-item">• 填入内网 SMARTQ_SVC_URL、worksId/reportId</text>
+          <text x="682" y="1051.0" class="t-muted roadmap-item">• 挂载真实 指标字典.json 与 机构归属.json</text>
+          <text x="682" y="1063.5" class="t-muted roadmap-item">• 实测纯HTTP免登续期与 AUTHX_01002 重试</text>
           <text x="682" y="1076.0" class="t-muted roadmap-item">• 实测82家拉数耗时、并发限流与行级裁剪</text>
           <text x="682" y="1088.5" class="t-muted roadmap-item">• 实测小Q SSE 的 workspaceId / dataSetId</text>
         </g>
 
         <g data-graph-role="roadmap-note" data-roadmap-lane="4">
-          <rect x="668" y="1262" width="248" height="376" rx="8" class="roadmap-box roadmap-box-wait"/>
+          <rect x="668" y="1262" width="248" height="376" rx="8" class="roadmap-box roadmap-box-done"/>
           <text x="680" y="1280" class="t-primary roadmap-heading">阶段五 · 进度与待办</text>
-          <g class="st-pill st-pill-wait">
-            <rect x="854.5" y="1269" width="51.5" height="14" rx="7"/>
-            <text x="880.2" y="1278.5" text-anchor="middle">待上线冲刺</text>
+          <g class="st-pill st-pill-done">
+            <rect x="850.5" y="1269" width="55.5" height="14" rx="7"/>
+            <text x="878.2" y="1278.5" text-anchor="middle">v1.0.0 已发</text>
           </g>
           <line x1="678" y1="1289" x2="906" y2="1289" stroke="var(--lane-stroke)" stroke-width="0.75" opacity="0.7"/>
-          <text x="680" y="1303" class="t-backend roadmap-sec">✓ 本地闭环已跑通（阶段1-6）</text>
-          <text x="682" y="1316.5" class="t-muted roadmap-item">• TDesign 蓝白高密度工作台与三轨轨迹上线</text>
-          <text x="682" y="1329.0" class="t-muted roadmap-item">• 999999勾稽、行级裁剪与小Q自主改写已通</text>
-          <text x="682" y="1341.5" class="t-muted roadmap-item">• 动态画像+伪信号过滤，千行千面撰函已通</text>
-          <text x="682" y="1354.0" class="t-muted roadmap-item">• gpt-5.4-mini实测鹿城/杭州联合正式公文</text>
-          <text x="680" y="1371.5" class="t-security roadmap-sec">▸ 接下来必做（P0 · 上线关键）</text>
-          <text x="682" y="1385.0" class="t-muted roadmap-item">• 切换行内正式大模型（替换本地测试模型）</text>
-          <text x="682" y="1397.5" class="t-muted roadmap-item">• 调优82家批量归并超时上限与引用重试</text>
-          <text x="682" y="1410.0" class="t-muted roadmap-item">• 用内网真数据跑通省/市/行社业务验收</text>
-          <text x="680" y="1427.5" class="t-cloud roadmap-sec">▸ 后续完善（P1 · 交付闭环）</text>
-          <text x="682" y="1441.0" class="t-muted roadmap-item">• 补齐正式 Word / PDF 红头风险提示函导出</text>
-          <text x="682" y="1453.5" class="t-muted roadmap-item">• 支持82家风险提示函一键批量打包下载</text>
-          <text x="682" y="1466.0" class="t-muted roadmap-item">• 补齐剩余2维度（农小定位/重点业务管理）</text>
-          <text x="682" y="1478.5" class="t-muted roadmap-item">• 按需对接行内审批流、发送留痕与历史对比</text>
-          <text x="682" y="1491.0" class="t-muted roadmap-item">• 若需自主写码分析，内网启用 Docker 沙箱</text>
+          <text x="680" y="1303" class="t-backend roadmap-sec">✓ v1.0.0 本地全闭环已落地</text>
+          <text x="682" y="1316.5" class="t-muted roadmap-item">• DeepSeek V4.1 思考链与82家140s归并跑通</text>
+          <text x="682" y="1329.0" class="t-muted roadmap-item">• 两层核验(34原语+7算子)与MCP3工具上线</text>
+          <text x="682" y="1341.5" class="t-muted roadmap-item">• 扫描后后台自动出重点风险报告(默认Top8)</text>
+          <text x="682" y="1354.0" class="t-muted roadmap-item">• 两位小数公文、在线定稿与零依赖Word导出</text>
+          <text x="682" y="1366.5" class="t-muted roadmap-item">• 时间轴折叠空闲间隙与安全清理历史任务</text>
+          <text x="680" y="1384.0" class="t-security roadmap-sec">▸ 接下来必做（P0 · 内网上线）</text>
+          <text x="682" y="1397.5" class="t-muted roadmap-item">• 切换行内正式大模型，核验真数归并质量</text>
+          <text x="682" y="1410.0" class="t-muted roadmap-item">• 内网省/市/行社三类账号端到端真数验收</text>
+          <text x="680" y="1427.5" class="t-cloud roadmap-sec">▸ 后续演进（v1.1 · 能力升级）</text>
+          <text x="682" y="1441.0" class="t-muted roadmap-item">• 追问接入7大核验算子、新增全辖汇总报告</text>
+          <text x="682" y="1453.5" class="t-muted roadmap-item">• 公开语料库接入写作纪律与留出集Eval评测</text>
+          <text x="682" y="1466.0" class="t-muted roadmap-item">• 借鉴DSH补SSE流式思考与82家批量打包</text>
+          <text x="682" y="1478.5" class="t-muted roadmap-item">• 补齐农小定位/重点业务(约42项)与PG部署</text>
         </g>
 
         <!-- Legend -->
@@ -5718,7 +5717,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
             <text x="485" y="1686" class="t-muted" font-size="7.5" font-weight="500">外部系统</text>
           </g>
           <!-- Progress Status Legend -->
-          <text x="20" y="1715" class="t-primary" font-size="11" font-weight="650">进度状态标注（2026-11-24 · 阶段1-6本地已完成）</text>
+          <text x="20" y="1715" class="t-primary" font-size="11" font-weight="650">进度状态标注（2026-11-26 · v1.0.0 正式版已发布）</text>
           <g class="st-pill st-pill-done">
             <rect x="20" y="1725" width="58" height="15" rx="7.5"/>
             <text x="49" y="1735.5" text-anchor="middle">已完成</text>
@@ -5735,7 +5734,7 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
             <rect x="408" y="1725" width="70" height="15" rx="7.5"/>
             <text x="443" y="1735.5" text-anchor="middle">下一步待做</text>
           </g>
-          <text x="484" y="1735.5" class="t-muted" font-size="7.5">切行内模型 / 剩余2维度 / 红头PDF导出</text>
+          <text x="484" y="1735.5" class="t-muted" font-size="7.5">切行内模型 / 追问接算子 / 语料评测与流式思考</text>
 
           <g class="st-pill st-pill-opt">
             <rect x="630" y="1725" width="66" height="15" rx="7.5"/>
@@ -5920,15 +5919,15 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
     </div>
     <!-- Info Cards -->
     <div class="cards">
-      <div class="card">
+            <div class="card">
         <div class="card-header">
           <div class="card-dot emerald"></div>
-          <h3>已完成（阶段 1–6 本地全闭环）</h3>
+          <h3>已完成（v1.0.0 正式版已发布）</h3>
         </div>
         <ul>
-          <li><strong>内置知识库与小 Q 改写：</strong>预置 5 大风险面、62 项规则及 91+21 小 Q 问句/监管线知识包，追问缺数时自主改写调小 Q 补查。</li>
-          <li><strong>TDesign 82 家高密度工作台：</strong>落地五阶段流程横条、82 家紧凑表、源表 <code>999999</code> 勾稽、行级裁剪与 DeepSeek Harness 风格三轨执行轨迹。</li>
-          <li><strong>动态画像与真模型撰函：</strong>先过滤良性/伪信号排定 P0/P1 风险，再由 <code>gpt-5.4-mini</code> 动态量身生成千行千面正式公文与附表。</li>
+          <li><strong>DeepSeek V4.1 + 核验算子：</strong>82 家归并 140s 跑通并完整记录思考链；落地 34 个 L1 原语 + 7 个 L2 金融核验算子与只读 MCP 3 工具。</li>
+          <li><strong>自动「风险报告」与 Word 导出：</strong>扫描后后台自动出重点行社报告，对外两位小数、在线编辑定稿与零依赖标准 Word（<code>.docx</code>）导出全部落地。</li>
+          <li><strong>工作台治理与内网协议对齐：</strong>时间轴支持折叠空闲间隙、历史栏可安全清理；对齐内网 <code>smartq_ticket</code> 纯 HTTP 免登与真实 <code>olapQueryParam</code> 表单协议。</li>
         </ul>
       </div>
 
@@ -5938,21 +5937,19 @@ OTHER DEALINGS IN THE FONT SOFTWARE.
           <h3>下一步必做 · P0（内网上线核心）</h3>
         </div>
         <ul>
-          <li><strong>内网取数实测联调：</strong>填入内网 AK/SK、<code>QB_REPORT_ID</code>、真实 <code>指标字典.json</code> / <code>机构归属.json</code>，核对 OLAP 包封与正式 <code>ticket</code> 鉴权。</li>
-          <li><strong>切换行内正式大模型：</strong>将本地测试模型切为行内正式大模型，并调优全辖 82 家批量归并的超时上限与引用重试。</li>
-          <li><strong>端到端真数据验收：</strong>用省/市/行社不同账号跑通真实快照扫描，核验 82 家与受限账号的行级裁剪及数值精度。</li>
+          <li><strong>内网取数实测联调：</strong>填入内网 <code>SMARTQ_SVC_URL</code>、<code>worksId/reportId</code> 与真实字典/机构表，实测纯 HTTP 免登续期、82 家耗时与行级裁剪。</li>
+          <li><strong>切换行内正式大模型：</strong>替换本地 DeepSeek 密钥为行内正式大模型，跑通省/市/行社三类账号端到端真数据业务复核。</li>
         </ul>
       </div>
 
       <div class="card">
         <div class="card-header">
           <div class="card-dot amber"></div>
-          <h3>后续完善 · P1（补齐交付闭环）</h3>
+          <h3>后续演进 · v1.1（能力再升级）</h3>
         </div>
         <ul>
-          <li><strong>补齐剩余 2 个风险面：</strong>内网接入“农小定位”“重点业务管理”约 42 项底表指标。</li>
-          <li><strong>红头公文与批量导出：</strong>在现有正式公文排版与 Markdown 导出基础上，补齐 Word / PDF 红头格式与 82 家一键打包下载。</li>
-          <li><strong>长期扩展（按需）：</strong>支持新版提示函知识库更新、历史期次对比及内网 Docker 自主分析沙箱。</li>
+          <li><strong>分析与评测增强：</strong>给追问接入 7 大核验算子、新增《全辖汇总风险报告》、将《公开风险报告语料库》接入提示词纪律与留出集 Eval。</li>
+          <li><strong>实时体验与补数生产化：</strong>借鉴 DSH 引入 SSE 实时思考流与子任务板；补齐剩余 2 维度（约 42 项）、82 家一键打包与 PostgreSQL 并发部署。</li>
         </ul>
       </div>
     </div>
